@@ -1,0 +1,416 @@
+/* Basic Reset */
+body, h1, h2, h3, p, ul, li, a, form, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #e0e0e0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+#main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: calc(85vh - 80px);
+    margin-top: 80px;
+}
+
+.rectangle-box {
+    display: flex;
+    background: #13131b;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%; /* Change to 100% for responsiveness */
+    max-width: 1100px; /* Max width to maintain design */
+    height: auto; /* Allow height to adjust */
+    position: relative; /* Added to position the scrollbar */
+}
+
+/* Profile Section */
+.profile-section {
+    width: 100%; /* Full width for responsive design */
+    max-width: 350px; /* Max width to maintain design */
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    height: auto; /* Allow height to adjust */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url('images/profile_pic.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin: 0 auto 30px;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    gap: 20px; /* Space between icons */
+    margin-top: 20px; /* Add margin-top to separate from CV button */
+}
+
+.social-icons .social-icon i {
+    font-size: 2rem; /* Adjust size as needed */
+    color: #fff; /* Default icon color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* On hover */
+.social-icons .social-icon i:hover {
+    color: #007bff; /* Color on hover */
+}
+
+.download-btn {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff; /* Changed border to white */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #fff; /* Button background on hover */
+    color: #000; /* Button text color on hover */
+    border-color: #fff; /* Border color on hover */
+}
+
+/* Home section styles */
+.home-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.home-info h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.home-info .job-title {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.info-section {
+    flex: 1;
+    padding: 20px;
+    background: #1e1e1e;
+    height: auto; /* Allow height to adjust */
+    box-sizing: border-box;
+    overflow-y: auto; /* Enables vertical scrolling if needed */
+}
+
+/* Contact Info Section */
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    margin-bottom: 20px;
+}
+
+.contact-info .box {
+    flex: 1 1 22%; /* Responsive width */
+    min-width: 150px; /* Ensure minimum width */
+    text-align: center;
+    background: #333;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info .box i {
+    font-size: 2rem;
+    color: #7bb3e6; /* Changed to white */
+    margin-bottom: 10px;
+}
+
+.contact-info .box p {
+    margin: 0;
+    font-size: 1rem;
+    overflow-wrap: break-word;
+}
+
+.map-container {
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 30%;
+    height: 0;
+    background: #333;
+    border-radius: 5px;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.message-form {
+    margin-top: 20px;
+    background: #333;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.message-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-form label {
+    margin: 10px 0 5px;
+}
+
+.message-form input, .message-form textarea {
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background: #1e1e1e;
+    color: #fff;
+}
+
+.message-form button {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff; /* Changed border to white */
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.message-form button:hover {
+    background-color: #fff; /* Button background on hover */
+    color: #000; /* Button text color on hover */
+    border-color: #fff; /* Border color on hover */
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 135px;
+    width: 80px;
+    background: #151019;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+}
+
+.icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    background: #555;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.icon i {
+    color: #7bb3e6; /* Icon color */
+}
+
+.icon:hover {
+    background: #007bff;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.icon:hover .tooltip {
+    display: block;
+}
+
+.carousel-controls {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.carousel-controls button {
+    background: #555;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.carousel-controls button:hover {
+    background: #007bff;
+}
+
+.profile-section footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Custom scrollbar for WebKit browsers */
+.rectangle-box::-webkit-scrollbar {
+    width: 6px; /* Slim width */
+}
+
+.rectangle-box::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Track background */
+}
+
+.rectangle-box::-webkit-scrollbar-thumb {
+    background: #fff; /* Thumb color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.rectangle-box::-webkit-scrollbar-thumb:hover {
+    background: #ddd; /* Thumb color on hover */
+}
+
+.message-form::-webkit-scrollbar {
+    width: 6px; /* Slim width */
+}
+
+.message-form::-webkit-scrollbar-track {
+    background: #333; /* Track background */
+}
+
+.message-form::-webkit-scrollbar-thumb {
+    background: #fff; /* Thumb color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.message-form::-webkit-scrollbar-thumb:hover {
+    background: #ddd; /* Thumb color on hover */
+}
+
+/* Custom scrollbar for Firefox */
+.info-section {
+    scrollbar-width: thin; /* Makes the scrollbar thinner */
+    scrollbar-color: #fff #1e1e1e; /* Thumb color, Track color */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .rectangle-box {
+        flex-direction: column; /* Stack boxes on smaller screens */
+    }
+
+    .profile-section {
+        max-width: 100%; /* Full width on smaller screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .download-btn {
+        width: 100%; /* Full width button on smaller screens */
+    }
+
+    .contact-info .box {
+        flex: 1 1 48%; /* Adjust width on smaller screens */
+        margin: 5px; /* Add margin for spacing */
+    }
+}
+
+@media (max-width: 768px) {
+    .home-info h1 {
+        font-size: 2.5rem; /* Smaller heading size */
+    }
+
+    .home-info .job-title {
+        font-size: 1.5rem; /* Smaller job title size */
+    }
+
+    .sidebar {
+        width: 60px; /* Narrow sidebar on smaller screens */
+    }
+
+    .icon {
+        width: 40px; /* Smaller icons */
+        height: 40px; /* Smaller icons */
+    }
+
+    .contact-info .box {
+        flex: 1 1 100%; /* Full width boxes on small screens */
+        margin: 10px 0; /* Margin for vertical spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .home-info h1 {
+        font-size: 2rem; /* Even smaller heading size */
+    }
+
+    .home-info .job-title {
+        font-size: 1.2rem; /* Even smaller job title size */
+    }
+
+    .profile-pic {
+        width: 100px; /* Smaller profile picture */
+        height: 100px; /* Smaller profile picture */
+    }
+
+    .message-form input, .message-form textarea {
+        font-size: 0.9rem; /* Smaller text inputs */
+    }
+
+    .message-form button {
+        padding: 8px; /* Smaller button */
+    }
+}

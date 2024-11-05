@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Webpage</title>
+    <link rel="stylesheet" href="styles-toggle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Add EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    <main>
+        <section id="main-content">
+            <div class="rectangle-box">
+                <div class="profile-section">
+                    <div class="profile-pic"></div>
+                    <h2>Neeraj Kumar</h2>
+                    <p>IT Support</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/neeraj-kumar-nnk" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:neerajkumar.nee333@gmail.com" target="_blank" class="social-icon" title="Email: neerajkumar.nee333@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <a href="images/cv-link.pdf" class="download-btn">Download CV</a>
+                    <footer>
+                        <p>© 2024 All rights reserved.</p>
+                    </footer>
+                </div>
+                <div class="info-section">
+                    <!-- The Contact Form will be loaded here when "Contact" icon is clicked -->
+                </div>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <div class="icon-box">
+                <div class="icon" id="home-icon"><i class="fas fa-home"></i><span class="tooltip">Home</span></div>
+                <div class="icon" id="about-icon"><i class="fas fa-user"></i><span class="tooltip">About</span></div>
+                <div class="icon" id="resume-icon"><i class="fas fa-file-alt"></i><span class="tooltip">Resume</span></div>
+                <div class="icon" id="contact-icon"><i class="fas fa-envelope"></i><span class="tooltip">Contact</span></div>
+            </div>
+            <div class="carousel-controls">
+                <button id="prev-btn">←</button>
+                <button id="next-btn">→</button>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Include EmailJS SDK -->
+    <script>
+        (function(){
+            emailjs.init('yU2StdMXPE1rOO8xq'); // Replace with your EmailJS user ID
+        })();
+    </script>
+    <script src="scripts-toggle.js"></script>
+</body>
+</html>
